@@ -1,32 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <the-header />
+    <the-main>
+      <router-view></router-view>
+    </the-main>
+    <the-footer />
   </div>
 </template>
 
+<script>
+import TheFooter from "@/components/TheFooter";
+import TheHeader from "@/components/TheHeader";
+import TheMain from "@/components/TheMain";
+
+export default {
+  name: "App",
+  components: { TheHeader, TheMain, TheFooter },
+  mounted() {
+    this.routerControl(this.$route);
+  },
+  watch: {
+    $route: "routerControl",
+  },
+  methods: {
+    routerControl() {},
+  },
+};
+</script>
+
 <style lang="scss">
+// Import Fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+// Import Normalize
+@import "~@/assets/scss/normalize";
+@import "~@/assets/scss/tw-normalize";
+@import "~@/assets/scss/my-normalize";
+// Import Other
+@import "~@/assets/scss/variables";
+@import "~@/assets/scss/global-class";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: inherit;
+  font-family: $font-arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-base;
+  background: $bg-color-base;
 }
 </style>

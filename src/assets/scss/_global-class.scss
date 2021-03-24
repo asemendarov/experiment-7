@@ -1,0 +1,48 @@
+@import "./variables";
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-control {
+  cursor: pointer;
+}
+
+.icon-none {
+  cursor: inherit;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+.lighten-1 {
+  font-family: $font-open-sans;
+  color: lighten($color-base, 30);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
