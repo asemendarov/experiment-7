@@ -34,13 +34,15 @@ h1 {
   outline-offset: 0;
 }
 
-input:not([type="button"]) {
+input[type="text"],
+input[type="number"] {
   padding-left: 1.1rem;
   padding-right: 1.1rem;
 }
 
 input,
-button {
+button,
+select {
   background: initial;
 }
 

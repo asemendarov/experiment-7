@@ -52,6 +52,7 @@ export default {
     align-items: center;
     border: 1px solid $color-border;
     border-radius: 5px 0px 0px 5px;
+    margin-bottom: 0;
   }
 
   &__icon {
