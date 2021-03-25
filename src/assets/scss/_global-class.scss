@@ -34,6 +34,18 @@
   overflow: hidden;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-hover {
+  overflow: hidden;
+
+  &:hover {
+    // overflow-x: auto;
+  }
+}
+
 .ellipsis {
   text-overflow: ellipsis;
 }
@@ -45,4 +57,12 @@
 
 .nowrap {
   white-space: nowrap;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
 }

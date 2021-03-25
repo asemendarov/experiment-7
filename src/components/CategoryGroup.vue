@@ -1,13 +1,13 @@
 <template>
-  <div class="category-group d-flex">
-    <template v-for="(category, idx) in categories">
+  <div class="category-group d-flex overflow-x-hover">
+    <template v-for="idx in 6">
       <a class="category-group__item d-flex" href="" :key="idx">
         <div class="category-group__image">
           <img src="" alt="" />
         </div>
         <div class="category-group__body overflow-hidden">
-          <h6 class="category-group__title">{{ category.title }}</h6>
-          <span class="category-group__count lighten-1">{{ category.count }} товара</span>
+          <h6 class="category-group__title">Название категории</h6>
+          <span class="category-group__count lighten-1">132 товара</span>
         </div>
       </a>
     </template>
@@ -17,49 +17,23 @@
 <script>
 export default {
   name: "CategoryGroup",
-  data() {
-    return {
-      categories: [
-        {
-          title: "Название категории",
-          count: 134,
-        },
-        {
-          title: "Название",
-          count: 2,
-        },
-        {
-          title: "Название катег",
-          count: 132,
-        },
-        {
-          title: "Название кат",
-          count: 155,
-        },
-        {
-          title: "Название катего22222222222222222222222222222222222",
-          count: 166,
-        },
-      ],
-    };
-  },
 };
 </script>
 
 <style lang="scss">
 @import "~@/assets/scss/variables";
-
 .category-group {
+  scroll-snap-type: x mandatory;
+
   &__item {
-    width: 60px + 170px;
+    flex: 0 0 230px;
+    max-width: 230px;
+
+    scroll-snap-align: start;
 
     &:not(:last-of-type) {
       margin-right: 20px;
       border-right: 1px solid $color-border;
-    }
-
-    &:hover {
-      filter: brightness(85%);
     }
   }
 

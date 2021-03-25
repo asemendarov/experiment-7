@@ -15,7 +15,11 @@ import TheMain from "@/components/TheMain";
 
 export default {
   name: "App",
-  components: { TheHeader, TheMain, TheFooter },
+  components: {
+    TheHeader,
+    TheMain,
+    TheFooter,
+  },
   mounted() {
     this.routerControl(this.$route);
   },

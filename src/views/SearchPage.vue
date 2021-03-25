@@ -8,21 +8,42 @@
       </p>
     </div>
     <category-group />
-    <!-- <section class="price-list">
-      <div class="price-list__filter">
-        <div class="filter__category-list"></div>
+    <div class="price-list d-flex">
+      <div class="price-list__filter d-flex">
+        <!-- <category-list /> -->
+        <div class="cost-range">
+          <div class="d-flex">
+            <div class="cost-range__min">
+              <span>от</span>
+              <input class="cost-range__value" type="text" value="1000" />
+            </div>
+            <div class="cost-range__max">
+              <span>до</span>
+              <input class="cost-range__value" type="text" value="1000000" />
+              <span>₽</span>
+            </div>
+          </div>
+          <div class="cost-range__line">
+            <input type="range" name="" id="" />
+            <input type="range" name="" id="" />
+          </div>
+        </div>
       </div>
-      <div class="price-list__product-list"></div>
-    </section> -->
+    </div>
   </div>
 </template>
 
 <script>
 import SearchBox from "@/components/SearchBox";
-import CategoryGroup from "@/components/CategoryGroup.vue";
+import CategoryGroup from "@/components/CategoryGroup";
+// import CategoryList from "@/components/CategoryList";
 
 export default {
-  components: { SearchBox, CategoryGroup },
+  components: {
+    SearchBox,
+    CategoryGroup,
+    // CategoryList,
+  },
   name: "HomePage",
 };
 </script>
@@ -36,7 +57,28 @@ export default {
     align-items: center;
 
     & h1 {
+      align-self: flex-start;
       padding-right: 2rem;
+    }
+  }
+  .price-list {
+    margin-top: 20px;
+
+    &__filter {
+      flex-direction: column;
+    }
+  }
+
+  .cost-range {
+    align-items: center;
+
+    &__value {
+      margin: 0 10px;
+      max-width: 110px;
+      height: 40px;
+      border: 1px solid $color-border;
+      box-sizing: border-box;
+      border-radius: 3px;
     }
   }
 }

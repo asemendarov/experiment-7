@@ -20,12 +20,10 @@ export default {
 // 1rem - 10px
 
 .the-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   &__container {
-    flex: 0 1 1280px;
+    margin: 0 auto;
+
+    max-width: 1280px;
 
     margin-top: 3.2rem;
     margin-bottom: 5rem;
