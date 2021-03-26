@@ -12,13 +12,19 @@
 
 html,
 body {
-  height: 100%;
+  height: 1px; /* Required to make the child 100% of the min-height */
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: inherit;
   color: inherit;
-  white-space: nowrap;
+
+  &:hover {
+    text-decoration: inherit;
+    color: inherit;
+  }
 }
 
 h1 {

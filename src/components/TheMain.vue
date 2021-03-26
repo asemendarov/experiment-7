@@ -26,8 +26,13 @@ export default {
     max-width: 1280px;
 
     margin-top: 3.2rem;
-    margin-bottom: 5rem;
     padding: 0 4rem;
+  }
+
+  @media (max-width: 600px) {
+    &__container {
+      padding: 0 1.5rem;
+    }
   }
 }
 </style>

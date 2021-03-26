@@ -25,6 +25,11 @@
   position: relative;
 }
 
+.position-sticky {
+  position: sticky;
+  top: 0;
+}
+
 .icon-wrap {
   display: flex;
   justify-content: center;
@@ -78,4 +83,24 @@
 
 .p-absolute {
   position: absolute;
+}
+
+@media (max-width: 787px) {
+  .md-d-block {
+    display: block !important;
+  }
+
+  .md-d-none {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-d-block {
+    display: block !important;
+  }
+
+  .sm-d-none {
+    display: none !important;
+  }
 }

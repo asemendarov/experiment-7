@@ -44,7 +44,8 @@ export default {
 @import "~@/assets/scss/global-class";
 
 #app {
-  height: inherit;
+  min-height: inherit;
+
   font-family: $font-arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,5 +55,13 @@ export default {
   font-weight: 400;
   color: $color-base;
   background: $bg-color-base;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 150%;
+  }
 }
 </style>

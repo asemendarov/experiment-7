@@ -84,6 +84,10 @@ export default {
     color: $color-cta;
     background: $bg-color-cta;
     border-radius: 0px 3px 3px 0px;
+
+    &:hover {
+      filter: contrast(80%);
+    }
   }
 
   &__close {

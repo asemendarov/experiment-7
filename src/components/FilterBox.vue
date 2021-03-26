@@ -1,5 +1,5 @@
 <template>
-  <div class="filter-box d-flex">
+  <div class="filter-box">
     <category-list class="filter-box__category-list" />
     <cost-range class="filter-box__cost-range" />
     <brand-list class="filter-box__brand-list" />
@@ -23,8 +23,6 @@ export default {
 
 <style lang="scss">
 .filter-box {
-  flex-direction: column;
-
   &__cost-range {
     margin-top: 45px;
   }

@@ -37,6 +37,10 @@ export default {
 
   &__button {
     padding: 5px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .text-blue {

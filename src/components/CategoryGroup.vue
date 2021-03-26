@@ -1,8 +1,8 @@
 <template>
   <div class="category-group d-flex overflow-x-hover">
     <template v-for="idx in 6">
-      <a class="category-group__item d-flex" href="" :key="idx">
-        <div class="category-group__image">
+      <a class="category-group__item d-flex" href="" ping="" :key="idx">
+        <div class="category-group__image img-wrap">
           <img src="" alt="" />
         </div>
         <div class="category-group__body overflow-hidden">
@@ -34,6 +34,10 @@ export default {
     &:not(:last-of-type) {
       margin-right: 20px;
       border-right: 1px solid $color-border;
+    }
+
+    &:hover {
+      filter: contrast(80%);
     }
   }
 
